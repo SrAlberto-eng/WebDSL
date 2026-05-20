@@ -1,0 +1,19 @@
+target/
+*.class
+*.jar
+
+# Maven wrapper
+.mvn/wrapper/maven-wrapper.jar
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+*.classpath
+*.project
+.settings/
+
+# Generated output
+src/main/java/com/alberto/webdsl/output.html
+programa.c
+programa.py
