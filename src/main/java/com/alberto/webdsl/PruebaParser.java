@@ -24,7 +24,7 @@ public class PruebaParser {
 
         WebLexer lexer = new WebLexer();
         lexer.analizar(entrada);
-        System.out.println("*** Análisis léxico ***\n");
+        System.out.println("*** Analisis lexico ***\n");
         for (Token t : lexer.getTokens())
             System.out.println(t);
 

@@ -106,12 +106,13 @@ public class WebParser {
         return lista;
     }
 
-    /** Cero o más Elemento hasta encontrar un token que no sea inicio de elemento */
+    /** Cero o más Elemento; coma entre elementos es un separador opcional */
     private List<NodoElemento> Secciones() {
         List<NodoElemento> lista = new ArrayList<>();
         NodoElemento el;
         while (ex == null && (el = Elemento()) != null) {
             lista.add(el);
+            if (currentToken(TipoToken.COMA)) match(TipoToken.COMA);
         }
         return ex == null ? lista : null;
     }
@@ -136,7 +137,7 @@ public class WebParser {
             id = tokens.get(indiceToken).getNombre();
             match(TipoToken.ID);
             if (idsComponentes.contains(id)) {
-                if (ex == null) ex = new SyntaxException("El id '" + id + "' ya está en uso");
+                if (ex == null) ex = new SyntaxException("El id '" + id + "' ya esta en uso");
                 return null;
             }
             idsComponentes.add(id);
@@ -169,16 +170,17 @@ public class WebParser {
         return new NodoPropiedadEstilo(estilos);
     }
 
-    /** ID_ESTILO | ID_ESTILO , ListaEstilos */
+    /** ID_ESTILO | ID_ESTILO , ListaEstilos — acepta COLUMNAS_COMP porque "columnas" es ambiguo */
     private List<String> ListaEstilos() {
         List<String> lista = new ArrayList<>();
         do {
-            if (!currentToken(TipoToken.ID_ESTILO)) {
+            if (currentToken(TipoToken.ID_ESTILO) || currentToken(TipoToken.COLUMNAS_COMP)) {
+                lista.add(tokens.get(indiceToken).getNombre());
+                indiceToken++;
+            } else {
                 if (ex == null) ex = new SyntaxException(TipoToken.ID_ESTILO, tokenActual());
                 return null;
             }
-            lista.add(tokens.get(indiceToken).getNombre());
-            match(TipoToken.ID_ESTILO);
         } while (currentToken(TipoToken.COMA) && match(TipoToken.COMA));
         return lista;
     }
@@ -271,7 +273,7 @@ public class WebParser {
             }
             return new NodoValor(TipoValor.ID, v);
         }
-        if (ex == null) ex = new SyntaxException("Se esperaba un valor (cadena, número o variable)");
+        if (ex == null) ex = new SyntaxException("Se esperaba un valor (cadena, numero o variable)");
         return null;
     }
 
@@ -306,7 +308,6 @@ public class WebParser {
 
     private boolean match(String nombre) {
         if (currentToken(nombre)) {
-            System.out.println(nombre + ": " + tokens.get(indiceToken).getNombre());
             indiceToken++;
             return true;
         }

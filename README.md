@@ -72,23 +72,34 @@ fin-repite
 
 ```
 pagina MiSitio {
-  variables: titulo, descripcion
+  variables: nombre, descripcion
 
   encabezado {
-    titulo: "Bienvenido"
     estilo: fondo-primario, centrado
+    titulo: "Bienvenido"
+    subtitulo: "Mi sitio de ejemplo"
   }
 
   seccion principal {
-    texto: "Contenido principal"
     estilo: relleno
+    texto: "Contenido principal"
+    boton {
+      texto: "Ver más"
+      enlace: "#principal"
+    }
   }
 
   pie {
-    texto: "© 2025"
     estilo: centrado, fondo-oscuro
+    texto: "2025 MiSitio"
   }
 }
 ```
 
 **Salida (`output.html`):** página HTML completa con estilos embebidos lista para abrir en el navegador.
+
+## Tests
+
+```bash
+mvn test
+```
