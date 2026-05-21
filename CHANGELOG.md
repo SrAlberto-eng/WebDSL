@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.9.0] - 2026-05-20
+
+### Added
+- `MANUAL.md` — manual de usuario completo dirigido a usuarios nuevos: sintaxis, componentes, propiedades, estilos, control de flujo, imágenes, ejemplos y tabla de errores comunes
+
 ## [0.8.0] - 2026-05-20
 
 ### Added
