@@ -1,5 +1,9 @@
 package com.alberto.webdsl.simbols;
 
+/**
+ * Entrada de la tabla de símbolos. Almacena el nombre y el tipo
+ * de un identificador reconocido durante el análisis.
+ */
 public class Simbolo {
     private final String nombre;
     private Tipo tipo;

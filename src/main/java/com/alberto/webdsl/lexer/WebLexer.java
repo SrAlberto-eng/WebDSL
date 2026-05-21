@@ -7,6 +7,12 @@ import java.util.regex.Pattern;
 import com.alberto.webdsl.tokens.TipoToken;
 import com.alberto.webdsl.tokens.Token;
 
+/**
+ * Analizador léxico de WebDSL. Recibe el texto fuente de un archivo {@code .webdsl}
+ * y produce una lista de {@link com.alberto.webdsl.tokens.Token} en el orden en que
+ * aparecen en la entrada. Los espacios y comentarios ({@code #...}) se descartan.
+ * Lanza {@link LexicalException} si encuentra una secuencia no reconocida.
+ */
 public class WebLexer {
     private final ArrayList<TipoToken> tipos = new ArrayList<>();
     private final ArrayList<Token> tokens = new ArrayList<>();

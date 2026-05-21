@@ -2,6 +2,13 @@ package com.alberto.webdsl.astnodes;
 
 import com.alberto.webdsl.patronvisitor.ASTVisitor;
 
+/**
+ * Representa una expresión relacional usada en condiciones:
+ *   variable == "valor"
+ *   edad > 18
+ *
+ * Los operadores válidos son: ==, !=, <, >, <=, >=
+ */
 public class NodoComparacion extends Nodo {
     private final NodoValor izquierdo;
     private final String operadorRelacional;

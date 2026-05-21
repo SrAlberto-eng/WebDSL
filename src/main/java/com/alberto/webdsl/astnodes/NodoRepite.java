@@ -4,23 +4,25 @@ import java.util.List;
 
 import com.alberto.webdsl.patronvisitor.ASTVisitor;
 
-public class NodoRepite extends Nodo {
+/**
+ * Representa un bucle de iteración WebDSL sobre una variable:
+ *   repite (items)
+ *     <elementos>
+ *   fin-repite
+ *
+ * Itera sobre la variable declarada en la sección {@code variables:}.
+ */
+public class NodoRepite extends NodoElemento {
     private final String variable;
-    private final NodoValor valorInicial;
-    private final NodoValor valorFinal;
-    private final List<Nodo> cuerpo;
+    private final List<NodoElemento> cuerpo;
 
-    public NodoRepite(NodoValor valorFinal, NodoValor valorInicial, String variable, List<Nodo> cuerpo) {
-        this.valorFinal = valorFinal;
-        this.valorInicial = valorInicial;
+    public NodoRepite(String variable, List<NodoElemento> cuerpo) {
         this.variable = variable;
         this.cuerpo = cuerpo;
     }
 
-    public NodoValor getValorInicial() { return valorInicial; }
-    public NodoValor getValorFinal() { return valorFinal; }
     public String getVariable() { return variable; }
-    public List<Nodo> getCuerpo() { return cuerpo; }
+    public List<NodoElemento> getCuerpo() { return cuerpo; }
 
     @Override
     public void accept(ASTVisitor visitor) {

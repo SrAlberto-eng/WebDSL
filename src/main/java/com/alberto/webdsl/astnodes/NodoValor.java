@@ -2,17 +2,27 @@ package com.alberto.webdsl.astnodes;
 
 import com.alberto.webdsl.patronvisitor.ASTVisitor;
 
+/**
+ * Representa un valor literal o referencia a variable en una expresión WebDSL.
+ * El tipo distingue si el valor es un identificador de variable, una cadena o un número.
+ *   titulo: "Hola"    → TipoValor.CADENA
+ *   texto: miVar      → TipoValor.ID
+ *   si (edad > 18)    → TipoValor.NUMERO
+ */
 public class NodoValor extends Nodo {
-    private final String valor;
-    private final boolean esVariable;
 
-    public NodoValor(boolean esVariable, String valor) {
-        this.esVariable = esVariable;
+    public enum TipoValor { ID, CADENA, NUMERO }
+
+    private final TipoValor tipo;
+    private final String valor;
+
+    public NodoValor(TipoValor tipo, String valor) {
+        this.tipo = tipo;
         this.valor = valor;
     }
 
+    public TipoValor getTipo() { return tipo; }
     public String getValor() { return valor; }
-    public boolean isEsVariable() { return esVariable; }
 
     @Override
     public void accept(ASTVisitor visitor) {

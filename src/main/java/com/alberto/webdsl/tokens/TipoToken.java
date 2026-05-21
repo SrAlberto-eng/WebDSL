@@ -1,5 +1,10 @@
 package com.alberto.webdsl.tokens;
 
+/**
+ * Define el nombre y el patrón regex de un tipo de token WebDSL.
+ * Las constantes estáticas identifican cada categoría léxica del lenguaje:
+ * palabras reservadas, símbolos, literales e identificadores.
+ */
 public class TipoToken {
     private final String nombre;
     private final String patron;
