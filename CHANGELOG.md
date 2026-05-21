@@ -4,10 +4,15 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
-## [0.9.0] - 2026-05-20
+## [0.9.0] - 2026-05-21
 
 ### Added
-- `MANUAL.md` — manual de usuario completo dirigido a usuarios nuevos: sintaxis, componentes, propiedades, estilos, control de flujo, imágenes, ejemplos y tabla de errores comunes
+- `MANUAL.md` en la raíz del repositorio — manual de usuario completo dirigido a usuarios nuevos: sintaxis, componentes, propiedades, estilos, control de flujo, imágenes, ejemplos y tabla de errores comunes
+- Enlace al manual y al changelog en el README para acceso directo desde GitHub
+
+### Changed
+- `MANUAL.md` movido de `.docs/` a la raíz del repositorio para que GitHub lo renderice y sea accesible desde el README
+- `.docs/` vuelve al `.gitignore` (solo contenía documentación interna de planificación)
 
 ## [0.8.0] - 2026-05-20
 

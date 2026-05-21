@@ -2,6 +2,8 @@
 
 Traductor de **WebDSL** a HTML. Toma un archivo `.webdsl` que describe la estructura de una página web mediante componentes y genera un único archivo `.html` autocontenido con CSS y JavaScript embebidos.
 
+[Manual de usuario](MANUAL.md) · [Changelog](CHANGELOG.md) · [Demo en vivo](https://sralberto-eng.github.io/WebDSL/)
+
 ## Requisitos
 
 - Java 21
