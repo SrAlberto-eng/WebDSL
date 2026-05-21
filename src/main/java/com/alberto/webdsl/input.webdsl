@@ -1,16 +1,23 @@
 pagina MiSitio {
-  variables: titulo, descripcion
+  variables: nombre, descripcion
 
   encabezado {
-    titulo: "Bienvenido"
     estilo: fondo-primario, centrado
+    titulo: "Bienvenido"
+    subtitulo: "Sistema de ejemplo"
   }
 
   seccion principal {
+    estilo: relleno
     texto: "Contenido principal"
+    boton {
+      texto: "Ver más"
+      enlace: "#principal"
+    }
   }
 
   pie {
-    texto: "© 2025"
+    estilo: fondo-oscuro, centrado
+    texto: "© 2025 MiSitio"
   }
 }
