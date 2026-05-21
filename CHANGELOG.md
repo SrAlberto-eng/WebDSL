@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.5.0] - 2026-05-20
+
+### Added
+- `ASTVisitor` — interfaz completa con los 9 métodos `visit()`: `NodoPagina`, `NodoDeclaracion`, `NodoComponente`, `NodoPropiedadTexto`, `NodoPropiedadEstilo`, `NodoSi`, `NodoRepite`, `NodoComparacion`, `NodoValor`
+- Todos los nodos AST implementan `accept(ASTVisitor v)` para soportar el patrón visitor
+
+> Completado durante la fase de nodos AST para mantener el proyecto compilable en todo momento.
+
 ## [0.4.0] - 2026-05-20
 
 ### Added
