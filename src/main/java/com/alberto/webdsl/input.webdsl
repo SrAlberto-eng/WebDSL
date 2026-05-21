@@ -1,0 +1,16 @@
+pagina MiSitio {
+  variables: titulo, descripcion
+
+  encabezado {
+    titulo: "Bienvenido"
+    estilo: fondo-primario, centrado
+  }
+
+  seccion principal {
+    texto: "Contenido principal"
+  }
+
+  pie {
+    texto: "© 2025"
+  }
+}
