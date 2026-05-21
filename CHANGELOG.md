@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.9.1] - 2026-05-21
+
+### Fixed
+- Ruta de archivo de salida en README corregida de `src/.../output.html` a `docs/index.html`
+
 ## [0.9.0] - 2026-05-21
 
 ### Added

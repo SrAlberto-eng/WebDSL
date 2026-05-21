@@ -17,7 +17,7 @@ mvn exec:java -Dexec.mainClass=com.alberto.webdsl.PruebaParser
 ```
 
 Archivo de entrada: `src/main/java/com/alberto/webdsl/input.webdsl`  
-Archivo de salida: `src/main/java/com/alberto/webdsl/output.html`
+Archivo de salida: `docs/index.html`
 
 ## El lenguaje WebDSL
 
