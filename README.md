@@ -109,6 +109,7 @@ pagina AutoStock {
                 tarjeta {
                     estilo: sombra, redondeado
                     subtitulo: "Producto"
+  	                imagen: "docs/foto.jpg"
                     texto: "Stock disponible"
                     boton { texto: "Ver detalle", enlace: "#" }
                 }
