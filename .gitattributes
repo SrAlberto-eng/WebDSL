@@ -1,0 +1,19 @@
+# Normaliza todos los archivos de texto a LF al hacer commit,
+# independientemente del sistema operativo del colaborador.
+# En checkout, git respeta el LF en lugar de convertir a CRLF en Windows.
+* text=auto eol=lf
+
+# Archivos Java y de configuración — siempre texto
+*.java text eol=lf
+*.xml  text eol=lf
+*.md   text eol=lf
+*.yml  text eol=lf
+
+# Archivos del lenguaje WebDSL
+*.webdsl text eol=lf
+
+# Archivos binarios — sin ninguna conversión de saltos de línea
+*.jar   binary
+*.class binary
+*.png   binary
+*.jpg   binary
