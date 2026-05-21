@@ -4,6 +4,30 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.8.0] - 2026-05-20
+
+### Added
+- Carpeta `docs/` en la raíz con `index.html` y `assets/` para despliegue en GitHub Pages
+
+### Changed
+- Output del traductor apunta a `docs/index.html` en vez de `src/.../output.html`
+- `.gitignore` actualizado: se elimina la exclusión de `output.html`; `docs/` queda trackeado
+- README incluye enlace a la demo en vivo y el `input.webdsl` completo como ejemplo
+
+## [0.7.0] - 2026-05-20
+
+### Added
+- `TraductorHtml` — generador de HTML que implementa `ASTVisitor`; produce un `.html` autocontenido con CSS y JS embebidos
+- `GenerationException` — excepción no verificada para errores semánticos en tiempo de generación
+- Pre-scan del AST para inferir el tipo de cada variable: `[]` si aparece en `repite()`, `""` si no
+- Bloque de datos editables marcado al inicio del `<body>` para que el usuario llene los valores antes de servir
+- Script runtime fijo al final del `<body>`: resuelve atributos `data-var` contra variables JS del bloque de datos
+- CSS fijo embebido con todos los estilos del lenguaje (`.centrado`, `.fondo-oscuro`, `.columnas`, etc.)
+
+### Changed
+- `PruebaParser` integra el pipeline completo: léxico → sintáctico → generación; escribe `output.html` y diferencia los tres tipos de error en consola
+- CSS: clase `.chico` en lugar de `.pequeño` para compatibilidad con el lexer
+
 ## [0.6.0] - 2026-05-20
 
 ### Added

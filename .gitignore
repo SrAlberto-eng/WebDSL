@@ -15,7 +15,6 @@ target/
 *.project
 .settings/
 
-# Generated output
-src/main/java/com/alberto/webdsl/output.html
+# Archivos generados obsoletos
 programa.c
 programa.py
