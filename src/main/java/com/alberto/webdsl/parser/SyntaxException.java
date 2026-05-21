@@ -1,5 +1,9 @@
 package com.alberto.webdsl.parser;
 
+/**
+ * Excepción lanzada cuando el analizador sintáctico detecta
+ * una construcción que no respeta la gramática de WebDSL.
+ */
 public class SyntaxException extends Exception {
     public SyntaxException(String message) {
         super(message);

@@ -4,7 +4,14 @@ import java.util.List;
 
 import com.alberto.webdsl.patronvisitor.ASTVisitor;
 
-public class NodoDeclaracion extends Nodo {
+/**
+ * Representa la sección de declaración de variables:
+ *   variables: nombre, edad, descripcion
+ *
+ * Cada elemento de {@code variables} es un identificador declarado
+ * que puede usarse como valor en propiedades y expresiones de control de flujo.
+ */
+public class NodoDeclaracion extends NodoElemento {
     private final List<String> variables;
 
     public NodoDeclaracion(List<String> variables) {

@@ -1,5 +1,9 @@
 package com.alberto.webdsl.tokens;
 
+/**
+ * Unidad léxica producida por el analizador léxico.
+ * Agrupa el tipo de token ({@link TipoToken}) y el lexema reconocido en la entrada.
+ */
 public class Token {
     private final TipoToken tipo;
     private final String nombre;

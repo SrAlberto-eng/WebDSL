@@ -4,6 +4,11 @@ import java.util.ArrayList;
 
 import com.alberto.webdsl.parser.SyntaxException;
 
+/**
+ * Tabla de símbolos utilizada durante el análisis semántico.
+ * Registra cada variable declarada y verifica que no haya declaraciones
+ * duplicadas ni referencias a variables no declaradas.
+ */
 public class TablaSimbolos {
     private final ArrayList<Simbolo> simbolos = new ArrayList<>();
 
