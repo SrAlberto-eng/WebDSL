@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-05-20
+
+### Added
+- `TipoToken.java` reescrito con el alfabeto completo de WebDSL: palabras reservadas de componentes, propiedades, control de flujo, símbolos, literales e identificadores (`ID`, `ID_ESTILO`)
+- `WebLexer.java` creado como base del analizador léxico WebDSL
+
+### Removed
+- `PseudoLexer.java` eliminado (reemplazado por `WebLexer`)
+
 ## [0.1.1] - 2026-05-20
 
 ### Changed

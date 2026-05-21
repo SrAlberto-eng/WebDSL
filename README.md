@@ -61,7 +61,7 @@ Especificación completa en `src/main/java/com/alberto/.docs/PLAN_IMPLEMENTACION
 | Fase | Descripción | Estado |
 |------|-------------|--------|
 | 1 | Migración base (`com.alberto.webdsl`) | ✅ |
-| 2 | `TipoToken` WebDSL | ⬜ |
+| 2 | `TipoToken` WebDSL | ✅ |
 | 3 | `WebDslLexer` | ⬜ |
 | 4 | Nodos AST WebDSL | ⬜ |
 | 5 | `ASTVisitor` reescrito | ⬜ |
