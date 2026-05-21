@@ -1,23 +1,49 @@
-pagina MiSitio {
-  variables: nombre, descripcion
+# Página de ejemplo para AutoStock
+pagina AutoStock {
 
-  encabezado {
-    estilo: fondo-primario, centrado
-    titulo: "Bienvenido"
-    subtitulo: "Sistema de ejemplo"
-  }
+    variables: productos, usuario
 
-  seccion principal {
-    estilo: relleno
-    texto: "Contenido principal"
-    boton {
-      texto: "Ver más"
-      enlace: "#principal"
+    encabezado {
+        estilo: fondo-oscuro
+        titulo: "AutoStock"
+        subtitulo: "Sistema de Inventario"
+        nav {
+            boton { texto: "Inicio",     enlace: "#inicio" }
+            boton { texto: "Inventario", enlace: "#inv" }
+        }
     }
-  }
 
-  pie {
-    estilo: fondo-oscuro, centrado
-    texto: "© 2025 MiSitio"
-  }
+    seccion inicio {
+        estilo: fondo-primario, centrado, relleno-grande
+        titulo: "Control total"
+        texto: "Importa facturas XML automáticamente"
+        boton { texto: "Empezar", enlace: "#inv" }
+    }
+
+    seccion inv {
+        estilo: relleno
+        subtitulo: "Inventario"
+
+        lista catalogo {
+            estilo: columnas
+            repite ( productos )
+                tarjeta {
+                    estilo: sombra, redondeado
+                    subtitulo: "Producto"
+                    texto: "Stock disponible"
+                    boton { texto: "Ver detalle", enlace: "#" }
+                }
+            fin-repite
+            si ( productos == 0 ) entonces
+                texto: "No hay productos"
+            sino
+                texto: "Productos cargados"
+            fin-si
+        }
+    }
+
+    pie {
+        estilo: fondo-oscuro, centrado
+        texto: "2025 AutoStock"
+    }
 }
