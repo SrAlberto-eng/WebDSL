@@ -2,6 +2,7 @@ CLAUDE.md
 target/
 *.class
 *.jar
+.docs/
 
 # Maven wrapper
 .mvn/wrapper/maven-wrapper.jar
