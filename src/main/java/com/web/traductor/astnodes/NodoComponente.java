@@ -5,7 +5,7 @@ import java.util.List;
 import com.web.traductor.patronvisitor.ASTVisitor;
 
 /**
- * Representa un componente WebDSL con cuerpo anidado:
+ * Representa un componente Markup con cuerpo anidado:
  *   encabezado { ... }
  *   seccion miId { ... }
  *

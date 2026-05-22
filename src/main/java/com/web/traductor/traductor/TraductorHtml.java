@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * Generador de HTML para WebDSL. Implementa {@link ASTVisitor} y recorre el AST
+ * Generador de HTML para Markup. Implementa {@link ASTVisitor} y recorre el AST
  * producido por {@link com.web.traductor.parser.WebParser} para emitir un único
  * archivo {@code .html} autocontenido con CSS y JavaScript embebidos.
  *

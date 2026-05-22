@@ -2,7 +2,7 @@ package com.web.traductor.parser;
 
 /**
  * Excepción lanzada cuando el analizador sintáctico detecta
- * una construcción que no respeta la gramática de WebDSL.
+ * una construcción que no respeta la gramática de Markup.
  */
 public class SyntaxException extends Exception {
     public SyntaxException(String message) {

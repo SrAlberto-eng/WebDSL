@@ -1,7 +1,7 @@
 package com.web.traductor.tokens;
 
 /**
- * Define el nombre y el patrón regex de un tipo de token WebDSL.
+ * Define el nombre y el patrón regex de un tipo de token Markup.
  * Las constantes estáticas identifican cada categoría léxica del lenguaje:
  * palabras reservadas, símbolos, literales e identificadores.
  */

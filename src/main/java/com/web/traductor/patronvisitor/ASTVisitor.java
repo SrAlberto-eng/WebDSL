@@ -3,7 +3,7 @@ package com.web.traductor.patronvisitor;
 import com.web.traductor.astnodes.*;
 
 /**
- * Interfaz del patrón Visitor para el AST de WebDSL.
+ * Interfaz del patrón Visitor para el AST de Markup.
  * Cada implementación (TraductorHtml, etc.) recorre el árbol
  * y genera la salida correspondiente sin modificar los nodos.
  */

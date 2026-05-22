@@ -8,7 +8,7 @@ import com.web.traductor.tokens.TipoToken;
 import com.web.traductor.tokens.Token;
 
 /**
- * Analizador léxico de WebDSL. Recibe el texto fuente de un archivo {@code .webdsl}
+ * Analizador léxico de Markup. Recibe el texto fuente de un archivo {@code .markup}
  * y produce una lista de {@link com.web.traductor.tokens.Token} en el orden en que
  * aparecen en la entrada. Los espacios y comentarios ({@code #...}) se descartan.
  * Lanza {@link LexicalException} si encuentra una secuencia no reconocida.

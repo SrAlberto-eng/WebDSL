@@ -5,7 +5,7 @@ import java.util.List;
 import com.web.traductor.patronvisitor.ASTVisitor;
 
 /**
- * Representa una estructura condicional WebDSL:
+ * Representa una estructura condicional Markup:
  *   si (variable == "valor") entonces
  *     <elementos>
  *   sino

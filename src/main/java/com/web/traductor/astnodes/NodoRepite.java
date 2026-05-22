@@ -5,7 +5,7 @@ import java.util.List;
 import com.web.traductor.patronvisitor.ASTVisitor;
 
 /**
- * Representa un bucle de iteración WebDSL sobre una variable:
+ * Representa un bucle de iteración Markup sobre una variable:
  *   repite (items)
  *     <elementos>
  *   fin-repite
