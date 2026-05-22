@@ -6,7 +6,7 @@ Traductor de **WebDSL** a HTML. Toma un archivo `.webdsl` que describe la estruc
 
 ## Requisitos
 
-- Java 21
+- Java 25
 - Maven 3.x
 
 ## Uso

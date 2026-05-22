@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Changed
+- Actualizado el runtime objetivo a Java 25 y el compilador del proyecto a `maven.compiler.release=25`
+
 ## [0.9.1] - 2026-05-21
 
 ### Fixed

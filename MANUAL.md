@@ -25,7 +25,7 @@ un único archivo `.html` autocontenido listo para abrir en el navegador.
 
 ## 1. Requisitos y ejecución
 
-- Java 21
+- Java 25
 - Maven 3.x
 
 ```bash
