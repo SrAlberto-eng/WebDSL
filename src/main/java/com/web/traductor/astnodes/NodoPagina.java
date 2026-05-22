@@ -5,7 +5,7 @@ import java.util.List;
 import com.web.traductor.patronvisitor.ASTVisitor;
 
 /**
- * Nodo raíz del AST. Representa la construcción completa de una página Markup:
+ * Nodo raíz del AST. Contiene el nombre de la página, la declaración de variables y los elementos del cuerpo:
  *   pagina MiSitio {
  *     variables: ...
  *     <elementos>

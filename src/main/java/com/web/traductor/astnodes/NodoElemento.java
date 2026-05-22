@@ -2,7 +2,7 @@ package com.web.traductor.astnodes;
 
 /**
  * Clase abstracta base para todos los elementos que pueden aparecer
- * dentro del cuerpo de una página o componente Markup:
+ * dentro del cuerpo de una página o de otro componente:
  * componentes, propiedades, estilos y estructuras de control de flujo.
  */
 public abstract class NodoElemento extends Nodo { }

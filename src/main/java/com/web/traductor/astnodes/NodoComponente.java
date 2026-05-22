@@ -5,7 +5,7 @@ import java.util.List;
 import com.web.traductor.patronvisitor.ASTVisitor;
 
 /**
- * Representa un componente Markup con cuerpo anidado:
+ * Nodo del AST que representa un bloque con nombre, identificador opcional y lista de hijos:
  *   encabezado { ... }
  *   seccion miId { ... }
  *

@@ -23,7 +23,7 @@ import com.web.traductor.tokens.TipoToken;
 import com.web.traductor.tokens.Token;
 
 /**
- * Parser descendente recursivo para Markup.
+ * Parser descendente recursivo.
  * Consume la lista de tokens producida por {@link WebLexer} y construye
  * el AST ({@link NodoPagina}), registrando las variables declaradas
  * en la {@link TablaSimbolos} y validando su uso.

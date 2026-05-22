@@ -14,7 +14,7 @@ import com.web.traductor.traductor.GenerationException;
 import com.web.traductor.traductor.TraductorHtml;
 
 /**
- * Punto de entrada del traductor Markup.
+ * Punto de entrada del pipeline de traducción.
  * Lee {@code input.markup}, ejecuta el pipeline completo (léxico → sintáctico →
  * generación) y escribe el resultado en {@code output.html}.
  */

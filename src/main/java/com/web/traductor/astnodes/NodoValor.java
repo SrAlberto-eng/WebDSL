@@ -3,7 +3,7 @@ package com.web.traductor.astnodes;
 import com.web.traductor.patronvisitor.ASTVisitor;
 
 /**
- * Representa un valor literal o referencia a variable en una expresión Markup.
+ * Representa un valor atómico: cadena literal entre comillas, número entero o identificador de variable.
  * El tipo distingue si el valor es un identificador de variable, una cadena o un número.
  *   titulo: "Hola"    → TipoValor.CADENA
  *   texto: miVar      → TipoValor.ID

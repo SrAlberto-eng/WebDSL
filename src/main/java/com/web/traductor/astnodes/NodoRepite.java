@@ -5,7 +5,7 @@ import java.util.List;
 import com.web.traductor.patronvisitor.ASTVisitor;
 
 /**
- * Representa un bucle de iteración Markup sobre una variable:
+ * Nodo del AST para el bloque repite/fin-repite: itera sobre un array y repite el cuerpo una vez por elemento:
  *   repite (items)
  *     <elementos>
  *   fin-repite

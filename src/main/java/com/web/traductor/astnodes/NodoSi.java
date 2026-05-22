@@ -5,7 +5,7 @@ import java.util.List;
 import com.web.traductor.patronvisitor.ASTVisitor;
 
 /**
- * Representa una estructura condicional Markup:
+ * Nodo del AST para el bloque si/sino/fin-si. Ambas ramas son obligatorias según la gramática:
  *   si (variable == "valor") entonces
  *     <elementos>
  *   sino
