@@ -1,7 +1,7 @@
-# Manual de usuario — WebDSL
+# Manual de usuario — Markup Translator
 
-WebDSL es un lenguaje de marcado que describe la estructura de una página web
-mediante componentes anidados. El traductor toma un archivo `.webdsl` y produce
+Markup es un lenguaje de marcado que describe la estructura de una página web
+mediante componentes anidados. El traductor toma un archivo `.markup` y produce
 un único archivo `.html` autocontenido listo para abrir en el navegador.
 
 ---
@@ -9,7 +9,7 @@ un único archivo `.html` autocontenido listo para abrir en el navegador.
 ## Tabla de contenidos
 
 1. [Requisitos y ejecución](#1-requisitos-y-ejecución)
-2. [Estructura de un archivo WebDSL](#2-estructura-de-un-archivo-webdsl)
+2. [Estructura de un archivo Markup](#2-estructura-de-un-archivo-markup)
 3. [Variables](#3-variables)
 4. [Componentes](#4-componentes)
 5. [Propiedades de contenido](#5-propiedades-de-contenido)
@@ -32,11 +32,11 @@ un único archivo `.html` autocontenido listo para abrir en el navegador.
 # Compilar el proyecto
 mvn compile
 
-# Traducir input.webdsl → docs/index.html
-mvn exec:java -Dexec.mainClass=com.alberto.webdsl.PruebaParser
+# Traducir input.markup → docs/index.html
+mvn exec:java -Dexec.mainClass=com.web.traductor.PruebaParser
 ```
 
-El archivo de entrada es `src/main/java/com/alberto/webdsl/input.webdsl`.  
+El archivo de entrada es `src/main/java/com/web/traductor/input.markup`.  
 El archivo de salida es `docs/index.html`.
 
 Para ejecutar los tests:
@@ -47,9 +47,9 @@ mvn test
 
 ---
 
-## 2. Estructura de un archivo WebDSL
+## 2. Estructura de un archivo Markup
 
-Todo archivo WebDSL define exactamente **una página** con la palabra reservada
+Todo archivo Markup define exactamente **una página** con la palabra reservada
 `pagina`, un nombre, y un cuerpo entre llaves. El cuerpo siempre comienza con
 la sección `variables:`.
 
@@ -116,7 +116,7 @@ nombreComponente miId {
 
 ### Componentes disponibles
 
-| WebDSL | HTML generado | Descripción |
+| Markup | HTML generado | Descripción |
 |---|---|---|
 | `encabezado { }` | `<header>` | Cabecera de la página |
 | `nav { }` | `<nav>` | Barra de navegación |
@@ -224,7 +224,7 @@ seccion {
 
 ## 7. Control de flujo
 
-WebDSL tiene dos estructuras de control que generan JavaScript embebido en el
+El lenguaje tiene dos estructuras de control que generan JavaScript embebido en el
 HTML. Ambas requieren que las variables involucradas estén declaradas en
 `variables:`.
 

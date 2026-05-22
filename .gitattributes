@@ -9,8 +9,8 @@
 *.md   text eol=lf
 *.yml  text eol=lf
 
-# Archivos del lenguaje WebDSL
-*.webdsl text eol=lf
+# Archivos del lenguaje Markup
+*.markup text eol=lf
 
 # Archivos binarios — sin ninguna conversión de saltos de línea
 *.jar   binary
