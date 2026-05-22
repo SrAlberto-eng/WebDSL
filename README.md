@@ -1,25 +1,25 @@
-# WebDSL Translator
+# Markup Translator
 
-Traductor de **WebDSL** a HTML. Toma un archivo `.webdsl` que describe la estructura de una página web mediante componentes y genera un único archivo `.html` autocontenido con CSS y JavaScript embebidos.
+Traductor de **Markup** a HTML. Toma un archivo `.markup` que describe la estructura de una página web mediante componentes y genera un único archivo `.html` autocontenido con CSS y JavaScript embebidos.
 
-[Manual de usuario](MANUAL.md) · [Changelog](CHANGELOG.md) · [Demo en vivo](https://sralberto-eng.github.io/WebDSL/)
+[Manual de usuario](MANUAL.md) · [Changelog](CHANGELOG.md) · [Demo en vivo](https://sralberto-eng.github.io/markup-translator/)
 
 ## Requisitos
 
-- Java 21
+- Java 25
 - Maven 3.x
 
 ## Uso
 
 ```bash
 mvn compile
-mvn exec:java -Dexec.mainClass=com.alberto.webdsl.PruebaParser
+mvn exec:java -Dexec.mainClass=com.web.traductor.PruebaParser
 ```
 
-Archivo de entrada: `src/main/java/com/alberto/webdsl/input.webdsl`  
+Archivo de entrada: `src/main/java/com/web/traductor/input.markup`  
 Archivo de salida: `docs/index.html`
 
-## El lenguaje WebDSL
+## El lenguaje Markup
 
 Una página se describe con `pagina`, una sección de variables y una lista de componentes anidados. Los componentes aceptan propiedades de contenido y estilo.
 
@@ -70,13 +70,13 @@ fin-repite
 
 ## Demo
 
-[**Ver página generada en vivo →**](https://sralberto-eng.github.io/WebDSL/)
+[**Ver página generada en vivo →**](https://sralberto-eng.github.io/markup-translator/)
 
-El archivo [`docs/index.html`](docs/index.html) es la salida real del traductor aplicado sobre `input.webdsl`.
+El archivo [`docs/index.html`](docs/index.html) es la salida real del traductor aplicado sobre `input.markup`.
 
 ## Ejemplo
 
-**Entrada ([`input.webdsl`](src/main/java/com/alberto/webdsl/input.webdsl)):**
+**Entrada ([`input.markup`](src/main/java/com/web/traductor/input.markup)):**
 
 ```
 # Página de ejemplo para AutoStock
@@ -111,7 +111,7 @@ pagina AutoStock {
                 tarjeta {
                     estilo: sombra, redondeado
                     subtitulo: "Producto"
-  	                imagen: "docs/foto.jpg"
+                    imagen: "assets/foto.jpg"
                     texto: "Stock disponible"
                     boton { texto: "Ver detalle", enlace: "#" }
                 }

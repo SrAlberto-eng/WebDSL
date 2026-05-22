@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Changed
+- Actualizado el runtime objetivo a Java 25 y el compilador del proyecto a `maven.compiler.release=25`
+- Paquetes Java migrados de `com.alberto.webdsl` a `com.web.traductor`
+- Extensión de archivos fuente `.webdsl` renombrada a `.markup`
+- Documentación actualizada con el nuevo nombre del proyecto
+
 ## [0.9.1] - 2026-05-21
 
 ### Fixed
